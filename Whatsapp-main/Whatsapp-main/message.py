@@ -72,4 +72,3 @@ print(wh_number)
 print(not_send)
 driver.close()
 
-
