@@ -1,25 +1,15 @@
 from selenium import webdriver
-from selenium.webdriver.chrome.service import Service
 from webdriver_manager.chrome import ChromeDriverManager
 from selenium.webdriver.common.action_chains import ActionChains
 from selenium.webdriver.common.keys import Keys
 from selenium.webdriver.common.by import By
 import time
-from selenium.webdriver.chrome.options import Options
-
-
-options = Options()
-options.add_experimental_option("excludeSwitches", ["enable-logging"])
-options.add_argument("--profile-directory=Default")
-options.add_argument("--user-data-dir=/var/tmp/chrome_user_data")
-
-
 # login_time = 10               
 new_msg_time = 7            
 send_msg_time = 3         
 action_time = 2               
 image_path ="C:/ragul.jpeg"
-driver = webdriver.Chrome(ChromeDriverManager().install(), options=options)
+driver = webdriver.Chrome(ChromeDriverManager().install())
 driver.get('https://web.whatsapp.com')
 input("Press ENTER...")
 
