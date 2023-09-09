@@ -8,8 +8,8 @@ import time
 new_msg_time = 7            
 send_msg_time = 3         
 action_time = 2               
-image_path ="C:/ragul.jpeg"
-driver = webdriver.Chrome(ChromeDriverManager().install())
+image_path ="C:/avanthi.jpeg"
+driver = webdriver.Chrome()
 driver.get('https://web.whatsapp.com')
 input("Press ENTER...")
 
@@ -39,11 +39,6 @@ with open('numbers.txt', 'r') as file:
             actions.send_keys(Keys.ENTER)
             actions.perform()
             time.sleep(send_msg_time)
-            cnt=cnt+1
-            f=open("whatsapp_number.txt","a")
-            f.write(num+'\n')
         except Exception as e:
             continue
-f.close()
-print(cnt)
 driver.quit()
